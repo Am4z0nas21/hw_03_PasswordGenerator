@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+
+      <div class="promptLength hide">
+        <textarea>How many characters would you like your password to contain?</textarea>
+        <input id="lengthInput" placeholder="8">
+        <button id="lengthBtn" onclick="lengthListener()">Ok</button>
+      </div>
+
+      <div class="promptSpecial hide">
+        <textarea>Click OK to confirm including special characters</textarea>
+        <button id="specialYesBtn" onclick="specialListener(this.id)">Yes</button>
+        <button id="specialNoBtn" onclick="specialListener(this.id)">No</button>
+      </div>
+
+      <div class="promptNumeric hide">
+        <textarea>Click OK to confirm including numeric characters</textarea>
+        <button id="numericYesBtn" onclick="numericListener(this.id)">Yes</button>
+        <button id="numericNoBtn" onclick="numericListener(this.id)">No</button>
+      </div>
+
+      <div class="promptLowercase hide">
+        <textarea>Click OK to confirm including lowercase characters</textarea>
+        <button id="lowercaseYesBtn" onclick="lowercaseListener(this.id)">Yes</button>
+        <button id="lowercaseNoBtn" onclick="lowercaseListener(this.id)">No</button>
+      </div>
+
+      <div class="promptUppercase hide">
+        <textarea>Click OK to confirm including uppercase characters</textarea>
+        <button id="uppercaseYesBtn" onclick="uppercaseListener(this.id)">Yes</button>
+        <button id="uppercaseNoBtn" onclick="uppercaseListener(this.id)">No</button>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
