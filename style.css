@@ -142,6 +142,10 @@ button[disabled] {
 }
 
 
+.rows {
+  display: inline-flex;
+  justify-content: center;
+}
 .errorCard {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;

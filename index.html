@@ -17,48 +17,60 @@
 
     <div class="promptLength hide">
       <div class="card">
-        <textarea rows="3">How many characters would you like your password to contain?</textarea>
-        <input id="lengthInput" placeholder="8">
-        <button id="lengthBtn" onclick="lengthListener()">Ok</button>
+        <div class="rows">
+          <textarea rows="3">How many characters would you like your password to contain?</textarea>
+          <input id="lengthInput" placeholder="8">
+          <button id="lengthBtn" onclick="lengthListener()">Ok</button>
+        </div>
       </div>
     </div>
 
     <div class="promptSpecial hide">
       <div class="card">
-        <textarea rows="3">Click Yes or No to confirm including special characters</textarea>
-        <button id="specialYesBtn" onclick="specialListener(this.id)">Yes</button>
-        <button id="specialNoBtn" onclick="specialListener(this.id)">No</button>
+        <div class="rows">
+          <textarea rows="3">Click Yes or No to confirm including special characters</textarea>
+          <button id="specialYesBtn" onclick="specialListener(this.id)">Yes</button>
+          <button id="specialNoBtn" onclick="specialListener(this.id)">No</button>
+        </div>
       </div>
     </div>
 
     <div class="promptNumeric hide">
       <div class="card">
-        <textarea rows="3">Click Yes or No to confirm including numeric characters</textarea>
-        <button id="numericYesBtn" onclick="numericListener(this.id)">Yes</button>
-        <button id="numericNoBtn" onclick="numericListener(this.id)">No</button>
+        <div class="rows">
+          <textarea rows="3">Click Yes or No to confirm including numeric characters</textarea>
+          <button id="numericYesBtn" onclick="numericListener(this.id)">Yes</button>
+          <button id="numericNoBtn" onclick="numericListener(this.id)">No</button>
+        </div>
       </div>
     </div>
 
     <div class="promptLowercase hide">
       <div class="card">
-        <textarea rows="3">Click Yes or No to confirm including lowercase characters</textarea>
-        <button id="lowercaseYesBtn" onclick="lowercaseListener(this.id)">Yes</button>
-        <button id="lowercaseNoBtn" onclick="lowercaseListener(this.id)">No</button>
+        <div class="rows">
+          <textarea rows="3">Click Yes or No to confirm including lowercase characters</textarea>
+          <button id="lowercaseYesBtn" onclick="lowercaseListener(this.id)">Yes</button>
+          <button id="lowercaseNoBtn" onclick="lowercaseListener(this.id)">No</button>
+        </div>
       </div>
     </div>
 
     <div class="promptUppercase hide">
       <div class="card">
-        <textarea rows="3">Click Yes or No to confirm including uppercase characters</textarea>
-        <button id="uppercaseYesBtn" onclick="uppercaseListener(this.id)">Yes</button>
-        <button id="uppercaseNoBtn" onclick="uppercaseListener(this.id)">No</button>
+        <div class="rows">
+          <textarea rows="3">Click Yes or No to confirm including uppercase characters</textarea>
+          <button id="uppercaseYesBtn" onclick="uppercaseListener(this.id)">Yes</button>
+          <button id="uppercaseNoBtn" onclick="uppercaseListener(this.id)">No</button>
+        </div>
       </div>
     </div>
 
     <div class="errorMsg hide">
       <div class="card">
-        <textarea class="errorCard" id="textAreaErrMsg" rows="3"></textarea>
-        <button id="errorMsgBtn" onclick="errorMsgListener()">Ok</button>
+        <div class="rows">
+          <textarea class="errorCard" id="textAreaErrMsg" rows="3"></textarea>
+          <button id="errorMsgBtn" onclick="errorMsgListener()">Ok</button>
+        </div>
       </div>
     </div>
 
