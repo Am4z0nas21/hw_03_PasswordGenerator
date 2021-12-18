@@ -15,23 +15,33 @@ function lengthListener() {
   length = document.querySelector("#lengthInput").value;
     // Conditional statement to check if password length is a number. Prompts end if this evaluates false
     if (Number.isNaN(length)) {
-      alert('Password length must be provided as a number');
+      showError('Password length must be provided as a number');
       return null;
     }
 
   // Conditional statement to check if password length is at least 8 characters long. Prompts end if this evaluates false
   if (length < 8) {
-    alert('Password length must be at least 8 characters');
+    showError('Password length must be at least 8 characters');
     return null;
   }
 
   // Conditional statement to check if password length is less than 128 characters long. Prompts end if this evaluates false
   if (length > 128) {
-    alert('Password length must less than 129 characters');
+    showError('Password length must less than 129 characters');
     return null;
   }
 
   showSection(".promptSpecial");
+}
+
+function showError(message) {
+  var textAreaElement =  document.querySelector("#textAreaErrMsg");
+  textAreaElement.value = message;
+  showSection(".errorMsg");
+}
+
+function errorMsgListener() {
+  hideSection(".errorMsg");
 }
 
 function specialListener(buttonId) {
@@ -116,7 +126,7 @@ function getPasswordOptions() {
     hasLowerCasedCharacters === false &&
     hasUpperCasedCharacters === false
   ) {
-    alert('Must select at least one character type');
+    showError('Must select at least one character type');
     return null;
   }
 
